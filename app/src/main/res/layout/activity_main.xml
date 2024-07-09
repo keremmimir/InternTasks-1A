@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".MainActivity">
 
     <!-- TODO Design task-1 screen here -->
@@ -15,23 +16,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xlarge"
         android:text="@string/city"
+        android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_large"
         android:textStyle="bold"
-        android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <TextView
         android:id="@+id/text_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/today"
-        android:textSize="@dimen/text_size_small"
         android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_city" />
+        app:layout_constraintTop_toBottomOf="@+id/text_city"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <ImageView
         android:id="@+id/image_sunny"
@@ -41,7 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_today"
-        tools:srcCompat="@drawable/ic_sunny" />
+        app:srcCompat="@drawable/ic_sunny"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <TextView
         android:id="@+id/text_weather_degree"
@@ -54,18 +58,20 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_sunny" />
+        app:layout_constraintTop_toBottomOf="@+id/image_sunny"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <TextView
         android:id="@+id/text_sunny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:textSize="@dimen/text_size_medium"
-        android:textColor="@color/text_color"
         android:text="@string/sunny"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/text_weather_degree" />
 
     <TextView
@@ -73,14 +79,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xlarge"
-        android:textSize="@dimen/text_size_small"
-        android:textColor="@color/text_color"
         android:text="@string/wind"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/text_sunny" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_small"
@@ -92,8 +100,8 @@
             android:id="@+id/image_wind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
             android:layout_marginRight="@dimen/margin_xsmall"
+            android:textColor="@color/text_color"
             app:srcCompat="@drawable/ic_wind" />
 
         <TextView
@@ -101,11 +109,179 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/image_wind"
-            android:textColor="@color/text_color"
             android:text="@string/wind_speed"
+            android:textColor="@color/text_color"
             android:textSize="@dimen/text_size_small"
             tools:layout_editor_absoluteX="172dp" />
 
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+
+        <TextView
+            android:id="@+id/text_date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date1"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/image_sunny2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_sunny"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_degree_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_range"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date1">
+
+
+        <TextView
+            android:id="@+id/text_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date2"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/image_cloudy"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_cloudy"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_degree_range2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_range"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date2">
+
+
+        <TextView
+            android:id="@+id/text_date3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date3"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/image_sunny3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_sunny"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_degree_range3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_range"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date3">
+
+
+        <TextView
+            android:id="@+id/text_date4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date1"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/image_rainy"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_rainy"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_degree_range4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_range"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            />
 
     </RelativeLayout>
 
