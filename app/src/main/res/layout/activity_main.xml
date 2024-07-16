@@ -20,9 +20,9 @@
         android:textSize="@dimen/text_size_large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_today"
@@ -32,9 +32,9 @@
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_city"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_city" />
 
     <ImageView
         android:id="@+id/image_sunny"
@@ -42,10 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_today"
-        app:srcCompat="@drawable/ic_sunny"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:srcCompat="@drawable/ic_sunny" />
 
     <TextView
         android:id="@+id/text_weather_degree"
@@ -70,8 +70,8 @@
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_weather_degree" />
 
     <TextView
@@ -83,207 +83,162 @@
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_sunny" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <ImageView
+        android:id="@+id/image_wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_small"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_xsmall"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toStartOf="@+id/text_wind_speed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_wind">
+        app:layout_constraintTop_toBottomOf="@+id/text_wind"
+        app:srcCompat="@drawable/ic_wind" />
 
-        <ImageView
-            android:id="@+id/image_wind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_xsmall"
-            android:textColor="@color/text_color"
-            app:srcCompat="@drawable/ic_wind" />
-
-        <TextView
-            android:id="@+id/text_wind_speed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_wind"
-            android:text="@string/wind_speed"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            tools:layout_editor_absoluteX="172dp" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/date1"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text_wind_speed"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
+        android:layout_toRightOf="@id/image_wind"
+        android:text="@string/wind_speed"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image_wind"
+        app:layout_constraintTop_toTopOf="@+id/image_wind" />
 
-
-        <TextView
-            android:id="@+id/text_date1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date1"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentLeft="true"/>
-
-        <ImageView
-            android:id="@+id/image_sunny2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_sunny"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/text_degree_range"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/degree_range"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentRight="true"
-            />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/date2"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text_date1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="@dimen/margin_small"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:text="@string/date1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toStartOf="@+id/image_sunny2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date1">
+        app:layout_constraintTop_toBottomOf="@+id/text_wind_speed" />
 
+    <ImageView
+        android:id="@+id/image_sunny2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toStartOf="@+id/text_degree_range"
+        app:layout_constraintStart_toEndOf="@+id/text_date1"
+        app:layout_constraintTop_toTopOf="@+id/text_date1"
+        app:srcCompat="@drawable/ic_sunny" />
 
-        <TextView
-            android:id="@+id/text_date2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date2"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentLeft="true"/>
-
-        <ImageView
-            android:id="@+id/image_cloudy"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_cloudy"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/text_degree_range2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/degree_range"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentRight="true"
-            />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/date3"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text_degree_range"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="@dimen/margin_small"
-        android:orientation="horizontal"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/degree_range"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date2">
+        app:layout_constraintStart_toEndOf="@+id/image_sunny2"
+        app:layout_constraintTop_toTopOf="@+id/image_sunny2" />
 
-
-        <TextView
-            android:id="@+id/text_date3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date3"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentLeft="true"/>
-
-        <ImageView
-            android:id="@+id/image_sunny3"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_sunny"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/text_degree_range3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/degree_range"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentRight="true"
-            />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/date4"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text_date2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="@dimen/margin_small"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date3">
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/date2"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="@+id/text_date1"
+        app:layout_constraintTop_toBottomOf="@+id/text_date1" />
 
+    <ImageView
+        android:id="@+id/image_cloudy"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toStartOf="@+id/text_degree_range2"
+        app:layout_constraintStart_toEndOf="@+id/text_date2"
+        app:layout_constraintTop_toTopOf="@+id/text_date2"
+        app:srcCompat="@drawable/ic_cloudy" />
 
-        <TextView
-            android:id="@+id/text_date4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date4"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/text_degree_range2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/degree_range"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/text_degree_range"
+        app:layout_constraintTop_toTopOf="@+id/image_cloudy" />
 
-        <ImageView
-            android:id="@+id/image_rainy"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_rainy"
-            android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/text_date3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/date3"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="@+id/text_date2"
+        app:layout_constraintTop_toBottomOf="@+id/text_date2" />
 
-        <TextView
-            android:id="@+id/text_degree_range4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/degree_range"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/text_size_small"
-            android:layout_alignParentRight="true"
-            />
+    <ImageView
+        android:id="@+id/image_sunny3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_degree_range3"
+        app:layout_constraintStart_toEndOf="@+id/text_date3"
+        app:layout_constraintTop_toTopOf="@+id/text_date3"
+        app:srcCompat="@drawable/ic_sunny" />
 
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_degree_range3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/degree_range"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/text_degree_range2"
+        app:layout_constraintTop_toTopOf="@+id/image_sunny3" />
 
+    <TextView
+        android:id="@+id/text_date4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/date4"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="@+id/text_date3"
+        app:layout_constraintTop_toBottomOf="@+id/text_date3" />
 
+    <TextView
+        android:id="@+id/text_degree_range4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/degree_range"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/text_degree_range3"
+        app:layout_constraintTop_toTopOf="@+id/image_rainy" />
+
+    <ImageView
+        android:id="@+id/image_rainy"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_degree_range4"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/text_date4"
+        app:layout_constraintTop_toTopOf="@+id/text_date4"
+        app:srcCompat="@drawable/ic_rainy" />
 </androidx.constraintlayout.widget.ConstraintLayout>
